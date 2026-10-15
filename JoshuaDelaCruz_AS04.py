@@ -23,18 +23,15 @@ def display_summary(stock_name, open_price, close_price,
     print("Percent Change:", percent_change, "%")
     print("Status:", status)
 
-# 3 repeats instead of pressing run 3 times
-for i in range(3):
-    stock_name = input("Enter stock name: ")
-    open_price = float(input("Enter opening price: "))
-    close_price = float(input("Enter closing price: "))
 
-    change = calculate_change(open_price, close_price)
-    percent_change = calculate_percent_change(open_price, close_price)
-    status = get_market_status(change)
+stock_name = input("Enter stock name: ")
+open_price = float(input("Enter opening price: "))
+close_price = float(input("Enter closing price: "))
 
-    display_summary(stock_name, open_price, close_price,
-                    change, percent_change, status)
+change = calculate_change(open_price, close_price)
+percent_change = calculate_percent_change(open_price, close_price)
+status = get_market_status(change)
 
+display_summary(stock_name, open_price, close_price,
+                change, percent_change, status)
 
-#source ctrl test
